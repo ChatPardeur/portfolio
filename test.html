@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Effect</title>
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    .image-container {
+        position: relative;
+        margin-right: 20px;
+    }
+    .text {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        padding: 10px;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .image-container:hover .text {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="image.jpg" alt="Image">
+        <div class="text">Texte à révéler</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac justo vestibulum, vehicula dui eu, porta tellus. In nec sapien vel risus sollicitudin condimentum a at tellus.</p>
+</div>
+</body>
+</html>
