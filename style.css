@@ -1,6 +1,11 @@
 @font-face {
   font-family: 'JosefinSans';
-  src: url(polices/JosefinSans-VariableFont_wght.woff2) format('woff2');
+  src: url(polices/JosephinSans/JosefinSans-VariableFont_wght.woff2) format('woff2');
+ }
+
+ @font-face {
+  font-family: 'PlusJakartaSans';
+  src: url(polices/PlusJakartaSans/PlusJakartaSans-VariableFont_wght.woff2) format('woff2');
  }
 
  body{
@@ -12,14 +17,18 @@
   margin: 0;
 }
 
+/*--------------------------------- nav bar ---------------------------------*/
 nav{
   width: fit-content;
   background-color: #47BDFF;
   border-radius: 0px  30px 30px 0px;
   position: fixed;
   left: 0;
-  top: 60%;
-  transform: translateY(-60%);
+  top: 30%;
+  transform: translateY(-30%);
+
+  /*border-right: 5px solid black;
+  border-bottom: 5px solid black;*/
 }
 
 nav:hover .nav_item_text
@@ -28,8 +37,7 @@ nav:hover .nav_item_text
 }
 
 .nav_item:hover{
-  background-color: #01509f;
-  color: white;
+  background-color: #7BD0FF;
 }
 
 ul{
@@ -62,7 +70,7 @@ li{
   width: 40px;
 }
 
-p{
+nav p{
   font-family: "JosefinSans";
   font-size: 30px;
   font-weight: bold;
@@ -72,3 +80,68 @@ p{
   display: none;
 }
 
+
+/*--------------------------------------------------------------------------*/
+/*--------------------------------- header ---------------------------------*/
+
+h1{
+  font-family: 'JosefinSans';
+  color: #FFFAFA;
+  font-size: 98px;
+  padding: 5px;
+}
+
+header span{
+  color: #47BDFF;
+}
+
+#b{
+  font-size: 135px;
+}
+header{
+  text-align: right;
+  padding: 50px;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------------- article --------------------------------*/
+
+article{
+  display: flex;
+  background-color: #7BD0FF;
+  margin: 100px 15%;
+  padding: 25px;
+
+  border-radius: 60px;
+}
+
+
+
+h3{
+  font-family: 'JosefinSans';
+  font-size: 50px;
+  margin: 15px;
+  margin-left: 0px;
+}
+
+article p{
+  font-family: 'PlusJakartaSans';
+  font-weight: 500;
+  font-size: 25px;
+
+  margin-top: 20px;
+  padding: 10px;
+}
+
+
+article img{
+  border-radius: 400px;
+  width: 250px;
+  height: 250px;
+  border-left: 15px solid black;
+  border-bottom: 15px solid black;
+
+  margin-top: 20px;
+  margin-right: 50px;
+}
