@@ -2,3 +2,4 @@ cv : nawicon
 contact : Uniconlabs
 projets / accueil : Freepik
 compétences : Karyative
+github : Pixel perfect

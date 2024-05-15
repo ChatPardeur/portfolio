@@ -145,3 +145,22 @@ article img{
   margin-top: 20px;
   margin-right: 50px;
 }
+
+
+/*------------------------------------------------------------------------*/
+/*-------------------------------- footer --------------------------------*/
+footer{
+  height: 100px;
+  background-color: #2879A6;
+  text-align: center;
+}
+
+#icones_ft{
+  display: block;
+  padding: 10px;
+}
+
+footer img{
+  height: 50px;
+  margin: 10px 50px;
+}
