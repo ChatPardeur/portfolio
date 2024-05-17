@@ -6,12 +6,22 @@
   --c2_2 : #5899e2;
 
   --black : #250001;
-  --white : #DDD5D0;
+  --white1 : #DDD5D0;
+  --white2 : #d1cccc;
+}
+
+.highlight{
+  color: var(--white2);
+  font-weight: bold;
+  font-size: 17px;
+  padding: 0px 5px;
 }
 
 h3{
   color: var(--black);
 }
+
+
 
 
 @font-face {
@@ -25,7 +35,6 @@ h3{
  }
 
  body{
-  /*background-color: #FFC749;*/
   background-color: var(--c2_1);
  }
 
@@ -83,12 +92,12 @@ li{
 }
 
 .nav_item img{
-  width: 40px;
+  width: 35px;
 }
 
 nav p{
   font-family: "JosefinSans";
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -102,7 +111,7 @@ nav p{
 
 h1{
   font-family: 'JosefinSans';
-  color: var(--white);
+  color: var(--white1);
   font-size: 98px;
   padding: 5px;
 }
@@ -124,20 +133,23 @@ header{
 /*-------------------------------- article --------------------------------*/
 /*------------------------------ me connaître -----------------------------*/
 
-
+hr{
+  border-color: var(--black);
+}
 
 article{
   display: flex;
- /* background-color: var(--c1_2);*/
+  background-color: var(--c2_2);
   margin: 100px 15%;
   padding: 25px;
 
-  border-radius: 0px 0px 0px 60px;
-  border-left: 6px solid black;
-  border-bottom: 6px solid black;
+  border-radius: 60px;
 }
 
-
+p{
+  color: black;
+  word-spacing: 5px;
+}
 
 h3{
   font-family: 'JosefinSans';
@@ -160,21 +172,25 @@ article img{
   border-radius: 400px;
   width: 250px;
   height: 250px;
-  border-left: 15px solid var(--c2_1);
-  border-bottom: 15px solid var(--c2_1);
+  border-left: 15px solid var(--black);
+  border-bottom: 15px solid var(--black);
 
   margin-top: 20px;
   margin-right: 50px;
 }
 
 /*------------------------------- parcours -------------------------------*/
+
 article section>p{
   text-align: center;
-  width: fit-content;
+  width: 120px;
+  margin: 0;
 }
 
 article section{
   display: flex;
+  align-items: center;
+
 }
 
 section div{
@@ -182,7 +198,7 @@ section div{
 }
 
 section hr{
-  margin: 5px 0px;
+  margin: 10px 0px;
   border: 1px solid var(--black);
 }
 
@@ -193,7 +209,9 @@ section h4{
 section h5{
   font-size: 17px;
   font-weight: 400;
+  margin-bottom: 10px;
 }
+
 
 section div p{
   padding: 0;
@@ -203,11 +221,12 @@ section div p{
 
 
 
+
 /*------------------------------------------------------------------------*/
 /*-------------------------------- footer --------------------------------*/
 footer{
   height: 100px;
-  background-color: var(--c1_3);
+  background-color: var(--c1_2);
   text-align: center;
 }
 
@@ -221,7 +240,3 @@ footer img{
   margin: 10px 50px;
 }
 
-.vert{
-  color: darkblue;
-  font-weight: bold;
-}
