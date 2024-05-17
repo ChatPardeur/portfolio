@@ -11,10 +11,8 @@
 }
 
 .highlight{
-  color: var(--white2);
+  color: var(--c1_1);
   font-weight: bold;
-  font-size: 17px;
-  padding: 0px 5px;
 }
 
 h3{
@@ -46,10 +44,10 @@ h3{
 /*--------------------------------- nav bar ---------------------------------*/
 nav{
   width: fit-content;
-  background-color: var(--c1_1);
   border-radius: 0px  30px 30px 0px;
+/*  border-left: 2px solid red;*/
   position: fixed;
-  left: 0;
+  left: 0px;
   top: 30%;
   transform: translateY(-30%);
 
@@ -58,11 +56,18 @@ nav{
 nav:hover .nav_item_text
 {
   display: flex;
-  color: var(--black);
+  color: var(--white1);
 }
 
+
+.nav_item{
+  border-bottom: 2px solid var(--c2_1);
+
+}
 .nav_item:hover{
-  background-color: var(--c1_2);
+  border-bottom: 2px solid var(--c1_1);
+
+  border-radius: 0;
 }
 
 ul{
@@ -134,25 +139,26 @@ header{
 /*------------------------------ me connaître -----------------------------*/
 
 hr{
-  border-color: var(--black);
+  border-color: var(--c1_1);
 }
 
 article{
   display: flex;
-  background-color: var(--c2_2);
   margin: 100px 15%;
   padding: 25px;
+  align-items: center;
 
   border-radius: 60px;
 }
 
 p{
-  color: black;
+  color: var(--white1);
   word-spacing: 5px;
 }
 
 h3{
   font-family: 'JosefinSans';
+  color: var(--white1);
   font-size: 50px;
   margin: 15px;
   margin-left: 0px;
@@ -164,7 +170,6 @@ article p{
   font-size: 25px;
 
   margin-top: 20px;
-  padding: 10px;
 }
 
 
@@ -172,8 +177,8 @@ article img{
   border-radius: 400px;
   width: 250px;
   height: 250px;
-  border-left: 15px solid var(--black);
-  border-bottom: 15px solid var(--black);
+  border-left: 10px solid var(--black);
+  border-bottom: 10px solid var(--black);
 
   margin-top: 20px;
   margin-right: 50px;
