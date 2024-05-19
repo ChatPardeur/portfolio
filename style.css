@@ -12,11 +12,13 @@
   font-weight: bold;
 }
 
-p, h1, h2, h3, h4, h5{
+p, h1, h2, h3, h4, h5, a{
   color: var(--white1);
 }
 
-
+a{
+  text-decoration: none;
+}
 
 
 @font-face {
@@ -40,14 +42,12 @@ p, h1, h2, h3, h4, h5{
 
 /*--------------------------------- nav bar ---------------------------------*/
 nav{
+  border-left: 2px solid var(--rouge1);
   width: fit-content;
-  border-radius: 0px  30px 30px 0px;
-/*  border-left: 2px solid red;*/
   position: fixed;
-  left: 10px;
-  top: 15%;
-  transform: translateY(-15%);
-
+  left: 15px;
+  top: 25%;
+  transform: translateY(-25%);
 }
 
 nav:hover .nav_item_text
@@ -56,11 +56,9 @@ nav:hover .nav_item_text
   color: var(--white1);
 }
 
-.nav_item{
-  border-bottom: 2px solid var(--bleu1);
-}
 .nav_item:hover p{
- font-weight: 700;
+ border-bottom: 2px solid var(--rouge1);
+
 }
 
 nav ul{
@@ -93,7 +91,7 @@ nav li{
 
 nav p{
   font-family: "JosefinSans";
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 500;
 }
 
@@ -101,14 +99,12 @@ nav p{
   display: none;
 }
 
-
 /*--------------------------------------------------------------------------*/
 /*--------------------------------- header ---------------------------------*/
-
 h1{
   font-family: 'JosefinSans';
   color: var(--white1);
-  font-size: 98px;
+  font-size: 110px;
   padding: 5px;
 }
 
@@ -117,18 +113,17 @@ header span{
 }
 
 #b{
-  font-size: 135px;
+  font-size: 150px;
 }
 header{
   text-align: right;
-  padding: 50px;
+  padding: 80px 90px 20px;
 }
 
 
 /*-------------------------------------------------------------------------*/
 /*-------------------------------- article --------------------------------*/
 /*------------------------------ me connaître -----------------------------*/
-
 hr{
   border-color: var(--rouge1);
 }
@@ -150,7 +145,7 @@ p{
 h3{
   font-family: 'JosefinSans';
   color: var(--white1);
-  font-size: 50px;
+  font-size: 55px;
   margin: 15px;
   margin-left: 0px;
 }
@@ -158,7 +153,7 @@ h3{
 article p{
   font-family: 'PlusJakartaSans';
   font-weight: 500;
-  font-size: 25px;
+  font-size: 27px;
 
   margin-top: 20px;
 }
@@ -166,13 +161,17 @@ article p{
 
 article img{
   border-radius: 400px;
-  width: 250px;
-  height: 250px;
-  border-left: 10px solid var(--black);
-  border-bottom: 10px solid var(--black);
+  width: 280px;
+  height: 280px;
+  /*border-left: 10px solid var(--black);
+  border-bottom: 10px solid var(--black);*/
 
   margin-top: 20px;
   margin-right: 50px;
+}
+
+article a:hover{
+  text-decoration: underline;
 }
 
 /*------------------------------- etudes -------------------------------*/
@@ -201,7 +200,8 @@ article li hr{
 }
 
 article li h4{
-  font-size: 20px;
+  font-size: 25px;
+  width: fit-content;
 }
 
 article li .highlight{
@@ -209,19 +209,10 @@ article li .highlight{
 }
 
 article li h5{
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 400;
   margin-bottom: 10px;
-}
-
-
-article li div p{
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-}
-
-  
+}  
 
 #etudes ul{
   margin-left: 35px;
@@ -255,11 +246,16 @@ footer{
   padding: 30px;
 }
 
+footer div{
+  margin: 0px 25px;
+}
 
 footer img{
   height: 50px;
-  margin: 0px 50px;
+  margin: 0px 40px;
 }
+
+
 
 footer a{
   text-decoration: none;
@@ -271,6 +267,6 @@ footer a:hover{
   text-decoration: underline;
 }
 
-#icones_ft a{
+#icones_ft{
   text-decoration: none;
 }
