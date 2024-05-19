@@ -1,22 +1,19 @@
 :root{
-  --c1_1 : #D62828;
-  --c1_2 : #c21f1f;
+  --rouge1 : #D62828;
 
-  --c2_1 : #003049;
-  --c2_2 : #5899e2;
+  --bleu1: #003049;
 
   --black : #250001;
   --white1 : #DDD5D0;
-  --white2 : #d1cccc;
 }
 
 .highlight{
-  color: var(--c1_1);
+  color: var(--rouge1);
   font-weight: bold;
 }
 
-h3{
-  color: var(--black);
+p, h1, h2, h3, h4, h5{
+  color: var(--white1);
 }
 
 
@@ -33,7 +30,7 @@ h3{
  }
 
  body{
-  background-color: var(--c2_1);
+  background-color: var(--bleu1);
  }
 
 *{
@@ -47,9 +44,9 @@ nav{
   border-radius: 0px  30px 30px 0px;
 /*  border-left: 2px solid red;*/
   position: fixed;
-  left: 0px;
-  top: 30%;
-  transform: translateY(-30%);
+  left: 10px;
+  top: 15%;
+  transform: translateY(-15%);
 
 }
 
@@ -59,22 +56,18 @@ nav:hover .nav_item_text
   color: var(--white1);
 }
 
-
 .nav_item{
-  border-bottom: 2px solid var(--c2_1);
-
+  border-bottom: 2px solid var(--bleu1);
 }
-.nav_item:hover{
-  border-bottom: 2px solid var(--c1_1);
-
-  border-radius: 0;
+.nav_item:hover p{
+ font-weight: 700;
 }
 
-ul{
+nav ul{
   padding-bottom: 1px;
 }
 
-li{
+nav li{
   list-style-type: none;
 }
 
@@ -84,10 +77,8 @@ li{
   width: fit-content;
 
   text-decoration: none;
-  color: var(--black);
 
   padding: 10px;
-  border-radius: 10px;
 
   margin: 15px;
 }
@@ -103,7 +94,7 @@ li{
 nav p{
   font-family: "JosefinSans";
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .nav_item_text{
@@ -122,7 +113,7 @@ h1{
 }
 
 header span{
-  color: var(--c1_1);
+  color: var(--rouge1);
 }
 
 #b{
@@ -139,7 +130,7 @@ header{
 /*------------------------------ me connaître -----------------------------*/
 
 hr{
-  border-color: var(--c1_1);
+  border-color: var(--rouge1);
 }
 
 article{
@@ -184,64 +175,102 @@ article img{
   margin-right: 50px;
 }
 
-/*------------------------------- parcours -------------------------------*/
+/*------------------------------- etudes -------------------------------*/
 
-article section>p{
+article li>p{
   text-align: center;
   width: 120px;
   margin: 0;
 }
 
-article section{
+article li{
   display: flex;
   align-items: center;
+  margin: 50px 0px;
 
 }
 
-section div{
+article li div{
   font-family: 'PlusJakartaSans';
+  margin-left: 50px;
 }
 
-section hr{
-  margin: 10px 0px;
-  border: 1px solid var(--black);
+article li hr{
+  margin: 15px 0px;
+  border: 1px solid var(--rouge1);
 }
 
-section h4{
+article li h4{
   font-size: 20px;
 }
 
-section h5{
+article li .highlight{
+  font-weight: 450;
+}
+
+article li h5{
   font-size: 17px;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
 
-section div p{
+article li div p{
   padding: 0;
   margin: 0;
   font-size: 15px;
 }
 
+  
 
+#etudes ul{
+  margin-left: 35px;
+}
 
+#etudes{
+  align-items: center;
+  top: 30px;
+}
+
+#etudes h3{
+  text-align: center;
+}
+
+#test{
+  height: 340px;
+  border-right: 2px solid var(--rouge1);
+}
 
 /*------------------------------------------------------------------------*/
 /*-------------------------------- footer --------------------------------*/
 footer{
-  height: 100px;
-  background-color: var(--c1_2);
-  text-align: center;
+
+  border-top: 3px solid var(--rouge1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'PlusjakartaSans';
+
+  padding: 30px;
 }
 
-#icones_ft{
-  display: block;
-  padding: 10px;
-}
 
 footer img{
   height: 50px;
-  margin: 10px 50px;
+  margin: 0px 50px;
 }
 
+footer a{
+  text-decoration: none;
+  color: var(--white1);
+  font-size: 16px;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+#icones_ft a{
+  text-decoration: none;
+}
