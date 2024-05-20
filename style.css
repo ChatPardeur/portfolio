@@ -31,6 +31,7 @@ a{
   src: url(polices/PlusJakartaSans/PlusJakartaSans-VariableFont_wght.woff2) format('woff2');
  }
 
+
  body{
   background-color: var(--bleu1);
  }
@@ -50,25 +51,6 @@ nav{
   transform: translateY(-25%);
 }
 
-nav:hover .nav_item_text
-{
-  display: flex;
-  color: var(--white1);
-}
-
-.nav_item:hover p{
- border-bottom: 2px solid var(--rouge1);
-
-}
-
-nav ul{
-  padding-bottom: 1px;
-}
-
-nav li{
-  list-style-type: none;
-}
-
 .nav_item{
   display: flex;
   align-items: center;
@@ -79,6 +61,36 @@ nav li{
   padding: 10px;
 
   margin: 15px;
+}
+
+.nav_item_text{
+  color: var(--white1);
+
+  transform: translateX(-10px);
+  opacity: 0;
+  
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+nav:hover .nav_item_text
+{
+
+  transform: translateX(0px);
+  opacity: 1;
+  transition: opacity 1s ease, transform 1s ease;
+
+}
+
+.nav_item:hover p{
+  border-bottom: 2px solid var(--rouge1);
+}
+
+nav ul{
+  padding-bottom: 1px;
+}
+
+nav li{
+  list-style-type: none;
 }
 
 .nav_item p{
@@ -95,9 +107,6 @@ nav p{
   font-weight: 500;
 }
 
-.nav_item_text{
-  display: none;
-}
 
 /*--------------------------------------------------------------------------*/
 /*--------------------------------- header ---------------------------------*/
@@ -113,11 +122,11 @@ header span{
 }
 
 #b{
-  font-size: 150px;
+  font-size: 140px;
 }
 header{
   text-align: right;
-  padding: 80px 90px 20px;
+  padding: 45px 60px 20px;
 }
 
 
@@ -157,6 +166,7 @@ article p{
 
   margin-top: 20px;
 }
+
 
 
 article img{
@@ -270,3 +280,4 @@ footer a:hover{
 #icones_ft{
   text-decoration: none;
 }
+
