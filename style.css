@@ -66,10 +66,10 @@ nav{
 .nav_item_text{
   color: var(--white1);
 
-  transform: translateX(-10px);
+  transform: translateX(-20px);
   opacity: 0;
   
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 nav:hover .nav_item_text
@@ -77,7 +77,7 @@ nav:hover .nav_item_text
 
   transform: translateX(0px);
   opacity: 1;
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 0.5s ease, transform 0.5ss ease;
 
 }
 
