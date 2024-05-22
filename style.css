@@ -293,22 +293,23 @@ footer a:hover{
 /*--------------------------------------------------------------------------*/
 /*----------------------------- filtre projets -----------------------------*/
 
-#filter{
-  margin: 20%;
+main{
+  justify-content: center;
 }
 
+#filter{
+  width: fit-content;
+}
 
 label{
   font-family: 'PlusJakartaSans';
   color: var(--white1);
   display: flex;
-
-  align-items: center;
-  justify-content: center;
 }
 
 label input[type='checkbox']{
   opacity: 0;
+  
 }
 
 label .checkbox{
@@ -317,21 +318,69 @@ label .checkbox{
 
   background-color: var(--white1);
 
-  border: 2px solid var(--bleu1);
+  border: 3px solid var(--white1);
   border-radius: 40px;
-
-  position: relative;
-  top: 13px;
 
   margin-right: 8px;
 }
 
+label p{
+  position: relative;
+}
+
 label .checkbox:hover{
-  border: 2px solid var(--rouge1);
+  border: 3px solid var(--rouge1);
 }
 
 label input:checked + .checkbox{
-  background-color: var(--rouge1);
-  border: 2px solid var(--white1);
 
+  background-color: var(--rouge1);
+  border: 3px solid var(--rouge1);
+}
+
+#label_tous{
+  border-bottom: 2px solid var(--rouge1);
+}
+
+
+
+label{
+  padding: 10px;
+
+}
+
+#filter{
+  position: absolute;
+  right: 20px;
+  top: 38%;
+}
+
+#filter li{
+  padding: 10px;
+  list-style-type: none;
+}
+
+#filter-container{
+  display: flex;
+  justify-content: right;
+}
+
+
+/*--------------------------------------------------------------------------*/
+/*--------------------------- conteneur projets ----------------------------*/
+
+#main-projet{
+  display: flex;
+}
+
+#projects-container{
+  height: 1000px;
+}
+
+#projects-container article{
+  display: none;
+}
+
+#projects-container .visible_project {
+  display: flex;
 }

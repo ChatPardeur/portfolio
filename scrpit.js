@@ -51,6 +51,77 @@ function apparitionTitre()
     header.classList.add("visible")
 }
 
+
+function showProject(className)
+{
+    let projects_to_show
+
+    if(className == "tous")
+        {
+            projects_to_show = Array.from(document.querySelectorAll("#projects-container article"))
+        }
+    else
+        {
+            projects_to_show = Array.from(document.getElementsByClassName(className))
+        }
+
+    for(const project of projects_to_show)
+        {
+            project.classList.add("visible_project")
+        }
+}
+
+function hideProject(className)
+{
+    let projects_to_hide
+
+    if(className == "tous")
+        {
+            projects_to_hide = Array.from(document.querySelectorAll("#projects-container article"))
+        }
+    else
+        {    
+            projects_to_hide = Array.from(document.getElementsByClassName(className))
+        }
+
+    for(const p of projects_to_hide)
+        {
+            p.classList.remove("visible_project")
+        }
+}
+
+
+
+
+function checkboxProjects()
+{
+    let coches
+    const checkboxs = Array.from(document.getElementsByTagName("input"))
+    for(const c of checkboxs)
+        {
+            c.addEventListener("change", () => {
+                if(c.checked)
+                    {
+                        console.log(c.id)
+                        showProject(c.id)
+                        
+                    }
+                else
+                {
+                    hideProject(c.id)
+                }
+            })
+        }
+
+
+    const projets = document.querySelectorAll('#projects-container article')
+}
+
 defilementArticle()
 apparitionNav()
 apparitionTitre()
+
+if(document.title == "projets BLB")
+{
+    checkboxProjects()
+}

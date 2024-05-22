@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>portfolio Baptiste LAMBERT--BRUNEL</title>
+        <title>projets BLB</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -11,13 +11,68 @@
             <h1 id="b"><span>M</span>es <span>P</span>rojets</h1>
         </header>
         <main>
-            <article id="filter">
-                <label>
-                    <input type="checkbox" name="tous" id="tous">
-                    <span class="checkbox"></span>
-                    <p>tous</p>
+          <div id="projects-container">
+            <article class="tous">
+              coucou1
+            </article>
+            <article class="tous">
+              coucou2
+            </article>
+          </div>
+          <div id="filter-container">
+            <ul id="filter">
+              <li>
+                <label id="label_tous">
+                <input type="checkbox" name="tous" id="tous" checked>
+                <span class="checkbox"></span>
+                <p>tous</p>
                 </label>
-            </div>
+              </li>
+              <li>
+                <label id="label_python">
+                  <input type="checkbox" name="python" id="python">
+                  <span class="checkbox"></span>
+                  <p>python</p>
+                </label>
+              </li>
+              <li>
+                <label id="label_c">
+                  <input type="checkbox" name="c" id="c">
+                  <span class="checkbox"></span>
+                  <p>C</p>
+                </label>
+              </li>
+              <li>
+                <label id="label_cs">
+                  <input type="checkbox" name="cs" id="cs">
+                  <span class="checkbox"></span>
+                  <p>C#</p>
+                </label>
+              </li>
+              <li>
+                <label id="label_web">
+                  <input type="checkbox" name="web" id="web">
+                  <span class="checkbox"></span>
+                  <p>html/css/js</p>
+                </label>
+              </li>
+              <li>
+                <label id="label_java">
+                  <input type="checkbox" name="java" id="java">
+                  <span class="checkbox"></span>
+                  <p>java</p>
+                </label>
+              </li>
+              <li>
+                <label id="label_sql">
+                  <input type="checkbox" name="sql" id="sql">
+                  <span class="checkbox"></span>
+                  <p>SQL</p>
+                </label>
+              </li>
+            </ul>
+          </div>
+          
         </main>
         <footer>
             <div id="icones_ft">
@@ -76,6 +131,8 @@
       
               </ul>
           </nav>
+          
+
     </body>
     <script src="scrpit.js"></script>
 </html>
