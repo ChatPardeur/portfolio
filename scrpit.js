@@ -52,7 +52,8 @@ function apparitionTitre()
 }
 
 
-function showProject(className)
+function showProject(className, projectsMap)
+/*show every article belonging to the class |className| */
 {
     let projects_to_show
 
@@ -67,11 +68,15 @@ function showProject(className)
 
     for(const project of projects_to_show)
         {
-            project.classList.add("visible_project")
+            projectsMap.set(project, projectsMap.get(project)+1)
+
+            if(projectsMap.get(project) == 1){
+                project.classList.add("visible_project")
+            }
         }
 }
 
-function hideProject(className)
+function hideProject(className, projectsMap)
 {
     let projects_to_hide
 
@@ -80,40 +85,54 @@ function hideProject(className)
             projects_to_hide = Array.from(document.querySelectorAll("#projects-container article"))
         }
     else
-        {    
+        {
             projects_to_hide = Array.from(document.getElementsByClassName(className))
         }
 
-    for(const p of projects_to_hide)
+    for(const project of projects_to_hide)
         {
-            p.classList.remove("visible_project")
+            projectsMap.set(project, projectsMap.get(project)-1)
+
+            if(projectsMap.get(project) == 0){
+                project.classList.remove("visible_project")
+            }
+            
         }
 }
 
 
-
-
 function checkboxProjects()
 {
-    let coches
     const checkboxs = Array.from(document.getElementsByTagName("input"))
-    for(const c of checkboxs)
+
+    const projects = Array.from(document.querySelectorAll("#projects-container article"));
+
+    let projectsMap = new Map() /*a map associating every article (project) with the amount of times a checkbox concerning it is checked
+                                (0 => should not be displyed, >0 => should be displayed)*/
+
+
+    for(const project of projects)
+        /*initiate every entry of the map*/
         {
-            c.addEventListener("change", () => {
-                if(c.checked)
-                    {
-                        console.log(c.id)
-                        showProject(c.id)
-                        
-                    }
-                else
-                {
-                    hideProject(c.id)
-                }
-            })
+            projectsMap.set(project, 0)
         }
 
 
+    showProject("tous", projectsMap) /*when the page is loaded the option "tous" is checked by default*/
+    for(const c of checkboxs)
+        {
+            c.addEventListener("change", () => {
+                console.log(projectsMap)
+                if(c.checked)
+                    {
+                        showProject(c.id, projectsMap)
+                    }
+                else
+                {
+                    hideProject(c.id, projectsMap)
+                }
+            })
+        }
     const projets = document.querySelectorAll('#projects-container article')
 }
 
