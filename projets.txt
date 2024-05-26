@@ -1,0 +1,27 @@
+Python
+- sticky ninja ?
+- rgb editor ?
+- démineur
+- huffman
+- problème 8 reines
+C
+- jeu de sudoku
+- solveur sudoku
+
+C#
+- flying augustin
+
+Web
+- calculateur de moyenne bac
+- tabas'kho
+- portfolio
+
+Java
+- perlin noise
+
+SQL
+- sae 104 création bdd
+- sae 204 stats
+
+autres
+- création event team building

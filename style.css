@@ -352,7 +352,7 @@ label{
 #filter{
   position: absolute;
   right: 20px;
-  top: 38%;
+  top: 30%;
 }
 
 #filter li{
@@ -374,11 +374,26 @@ label{
 }
 
 #projects-container{
+  display: flex;
+  flex-wrap: wrap;
+
   height: 1000px;
+
+  justify-content: left;
+
+  padding: 120px 260px;
 }
 
 #projects-container article{
   display: none;
+
+  height: 200px;
+  width: 200px;
+
+  border: 2px solid var(--rouge1);
+
+  margin: 0px 30px;
+  padding: 20px
 }
 
 #projects-container .visible_project {
