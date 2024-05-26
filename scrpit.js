@@ -106,6 +106,8 @@ function hideProject(className, projectsMap){       /*gère le masquage de tous 
 
     if(className == "tous"){
         projects_to_hide = Array.from(document.querySelectorAll("#projects-container article"))
+        console.log("cc")
+        document.getElementById("projects-container").style.height = 500;
     }
 
     else{
@@ -154,7 +156,10 @@ function checkboxProjects(){            /*fonction de gestion globale du tri des
     }
 }
 
-defilementArticle()
+if(document.title != "projets BLB")
+{
+    defilementArticle()
+}
 apparitionNav()
 apparitionTitre()
 

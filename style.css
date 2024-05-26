@@ -181,8 +181,6 @@ article img{
   border-radius: 400px;
   width: 280px;
   height: 280px;
-  /*border-left: 10px solid var(--black);
-  border-bottom: 10px solid var(--black);*/
 
   margin-top: 20px;
   margin-right: 50px;
@@ -285,6 +283,10 @@ footer a:hover{
   text-decoration: underline;
 }
 
+footer #icones_ft a:hover{
+  text-decoration: none;
+}
+
 #icones_ft{
   text-decoration: none;
 }
@@ -343,10 +345,8 @@ label input:checked + .checkbox{
 }
 
 
-
 label{
-  padding: 10px;
-
+  padding: 5px 10px;
 }
 
 #filter{
@@ -365,6 +365,9 @@ label{
   justify-content: right;
 }
 
+#tous{
+  margin-bottom: 15px;
+}
 
 /*--------------------------------------------------------------------------*/
 /*--------------------------- conteneur projets ----------------------------*/
@@ -377,25 +380,63 @@ label{
   display: flex;
   flex-wrap: wrap;
 
-  height: 1000px;
+  height: fit-content;
 
   justify-content: left;
 
-  padding: 120px 260px;
+  padding: 120px 245px;
 }
 
 #projects-container article{
   display: none;
 
-  height: 200px;
-  width: 200px;
-
-  border: 2px solid var(--rouge1);
-
+  height: fit-content;
   margin: 0px 30px;
-  padding: 20px
+  justify-content: center;
+  align-items: center;
+}
+
+
+#projects-container article h4{
+  font-family: "JosefinSans";
+  font-size: 55px;
+  border-bottom: 2px solid var(--rouge1);
+  padding-bottom: 10px;
+}
+
+#projects-container article .smallerh4{
+  font-size: 45px;
+
+}
+
+
+#projects-container article a{
+
+  margin-left: 20px;
+}
+
+#projects-container article a img{
+  height: 40px;
+  width: auto;
+  border-radius: 0px;
+}
+
+#projects-container article img{
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+#projects-container article a:hover{
+  text-decoration: none;
 }
 
 #projects-container .visible_project {
   display: flex;
+}
+
+
+#rien{
+  display: none;
 }
