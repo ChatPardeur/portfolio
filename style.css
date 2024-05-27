@@ -269,6 +269,11 @@ footer div{
 footer img{
   height: 50px;
   margin: 0px 40px;
+  transition: transform 0.3s ease;
+}
+
+footer img:hover{
+  transform: scale(1.1);
 }
 
 
@@ -290,6 +295,29 @@ footer #icones_ft a:hover{
 #icones_ft{
   text-decoration: none;
 }
+
+footer .contact{
+  display: flex;
+  margin: 10px 0px;
+}
+
+#contact h4{
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+#contact{
+  justify-content: center;
+}
+
+footer .contact img{
+  height: 20px;
+  width: auto;
+  margin-right:15px;
+  margin-left: 0px;
+}
+
+ 
 
 
 /*--------------------------------------------------------------------------*/
