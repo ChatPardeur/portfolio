@@ -5,7 +5,9 @@
 
   --black : #250001;
   --white1 : #DDD5D0;
+
 }
+
 
 .highlight{
   color: var(--rouge1);
@@ -135,6 +137,12 @@ header span{
 header{
   text-align: right;
   padding: 45px 60px 20px;
+}
+
+header p{
+  margin-top: 20px;
+  font-family: "PlusJakartaSans";
+  font-size: 18px;
 }
 
 
@@ -418,6 +426,8 @@ label{
 #projects-container article{
   display: none;
 
+
+
   height: fit-content;
   margin: 0px 30px;
   justify-content: center;
@@ -434,7 +444,6 @@ label{
 
 #projects-container article .smallerh4{
   font-size: 45px;
-
 }
 
 
@@ -467,4 +476,69 @@ label{
 
 #rien{
   display: none;
+}
+
+/*------------------------------------------------ page compétences ------------------------------------------------*/
+
+
+.competence{
+  display: block;
+  margin: 100px 17%;
+}
+
+.competence h3{
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--rouge1);
+}
+
+
+.competences_project_container{
+  display: flex;
+}
+
+.competence h3 span{
+  color: var(--rouge1);
+  font-size: 70px;
+  margin-right: 10px;
+}
+
+.competences_project img{
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  margin: 0px;
+  transition: transform 0.3s ease;
+
+}
+
+.competences_project img:hover{
+  transform: scale(1.1);
+}
+
+.competences_project{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.competences_project p{
+  font-family: "JosefinSans";
+
+  width: 200px;
+  margin: 0px;
+  margin-left: 15px;
+  padding-left: 10px;
+
+  border-left: 2px solid var(--rouge1);
+}
+
+.competences_project a:hover{
+  text-decoration: none;
+}
+
+.exemple h4{
+  font-family: "JosefinSans";
+  font-size: 30px;
+  margin: 20px 0px;
+
 }

@@ -31,7 +31,7 @@ function apparitionNav(){       /*les items de la navbar apparaissent au fur et 
             item.classList.add("visible")
 
             item.animate([
-                {transform: 'translateX(-20px)', opacity: 0},
+                {transform: 'translateX(20px)', opacity: 0},
                 {transform: 'translateX(0px)', opacity: 1}
             ], {duration: 300})
         }, 200*index);
@@ -54,6 +54,14 @@ function apparitionTitre(){         /*ajoute une légère animation à l'apparit
 
 /*------------------------------- tri projets à afficher | page projets -------------------------------*/
 /* voir description de projectsMap dans checkboxProjects() pour mieux comprendre */
+
+
+function animateShow(project){      /*animation pour le projet lorrqu'il apparaît*/
+    project.animate([
+        {transform: 'translateY(60px)', opacity: 0},
+        {transform: 'translateY(0px)', opacity: 1}
+    ], {duration: 400})
+}
 
 
 function showProject(className, projectsMap){           /*gère l'affichage de tous les articles ayant la classe |className|*/
@@ -93,6 +101,7 @@ function showProject(className, projectsMap){           /*gère l'affichage de t
         projectsMap.set(project, projectsMap.get(project)+1) /*met à jour projectsMap*/
 
         if(projectsMap.get(project) == 1){
+            animateShow(project)
             project.classList.add("visible_project")
         }
     }
@@ -121,7 +130,6 @@ function hideProject(className, projectsMap){       /*gère le masquage de tous 
         if(projectsMap.get(project) == 0){
             project.classList.remove("visible_project")
         }
-        
     }
 }
 
@@ -141,7 +149,7 @@ function checkboxProjects(){            /*fonction de gestion globale du tri des
     }
 
 
-    showProject("tous", projectsMap) /*car la checkbox "tous" est cochée par défaut au chargement de la page*/
+    showProject("tous", projectsMap)        /*car la checkbox "tous" est cochée par défaut au chargement de la page*/
     for(const c of checkboxs){
 
         c.addEventListener("change", () => {
