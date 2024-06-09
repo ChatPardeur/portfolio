@@ -64,9 +64,11 @@ function animateShow(project){      /*animation pour le projet lorrqu'il appara�
 }
 
 
+
 function showProject(className, projectsMap){           /*gère l'affichage de tous les articles ayant la classe |className|*/
 
     let projects_to_show /*array des projets à afficher*/
+
 
     if(className == "tous"){        /*décoche toutes les checkbox sauf "tous"*/
             
@@ -83,8 +85,12 @@ function showProject(className, projectsMap){           /*gère l'affichage de t
                 projectsMap.set(project, 0)
         }
 
+        /*évite d'afficher le projet spécial qui s'affiche quand aucun filtre n'est activé*/
+
 
         projects_to_show = Array.from(document.querySelectorAll("#projects-container article"))
+
+        
     }
 
     else{
@@ -115,8 +121,7 @@ function hideProject(className, projectsMap){       /*gère le masquage de tous 
 
     if(className == "tous"){
         projects_to_hide = Array.from(document.querySelectorAll("#projects-container article"))
-        console.log("cc")
-        document.getElementById("projects-container").style.height = 500;
+
     }
 
     else{
@@ -131,6 +136,10 @@ function hideProject(className, projectsMap){       /*gère le masquage de tous 
             project.classList.remove("visible_project")
         }
     }
+    if(className == "tous"){
+        console.log(document.getElementById("rien_a_afficher"))
+        document.getElementById("rien_a_afficher").classList.add("visible_project")
+    }
 }
 
 
@@ -143,7 +152,7 @@ function checkboxProjects(){            /*fonction de gestion globale du tri des
     let projectsMap = new Map()     /*une map qui associe cheque article (projet) avec le nombre de checkboxs cochées le concernant
                                     (0 => ne doit pas être affiché, >0 => doit être affiché*/
 
-
+    
     for(const project of projects){        /*initialise toutes les entrées de la map*/    
         projectsMap.set(project, 0)
     }
@@ -153,7 +162,6 @@ function checkboxProjects(){            /*fonction de gestion globale du tri des
     for(const c of checkboxs){
 
         c.addEventListener("change", () => {
-            console.log(projectsMap)
             if(c.checked){
                 showProject(c.id, projectsMap)      /*l'id d'une checkbox porte le même nom que la classe sur laquelle elle est censée agir*/
             }
@@ -174,3 +182,4 @@ apparitionTitre()
 if(document.title == "projets BLB"){
     checkboxProjects()
 }
+

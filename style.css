@@ -401,6 +401,10 @@ label{
   justify-content: right;
 }
 
+#projects-container{
+  min-height: 220px;
+}
+
 #tous{
   margin-bottom: 15px;
 }
@@ -427,11 +431,28 @@ label{
   display: none;
 
 
-
   height: fit-content;
   margin: 0px 30px;
   justify-content: center;
   align-items: center;
+}
+
+#rien_a_afficher{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 27.7%;
+}
+
+#rien_a_afficher img{
+  height: 180px;
+  width: 180px;
+}
+
+#rien_a_afficher h3{
+  margin: 0px;
+  font-size: 40px;
+  
 }
 
 
@@ -505,14 +526,14 @@ label{
 .competences_project img{
   width: 100px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 0px;
-  transition: transform 0.3s ease;
+  transition: transform 0.1s ease;
 
 }
 
 .competences_project img:hover{
-  transform: scale(1.08);
+  transform: scale(1.02);
 }
 
 .competences_project{
@@ -524,7 +545,7 @@ label{
 .competences_project p{
   font-family: "JosefinSans";
 
-  width: 200px;
+  width: 240px;
   margin: 0px;
   margin-left: 15px;
   padding-left: 10px;
@@ -532,13 +553,9 @@ label{
   border-left: 2px solid var(--rouge1);
 }
 
-.competences_project a:hover{
-  text-decoration: none;
-}
 
 .exemple h4{
   font-family: "JosefinSans";
   font-size: 30px;
   margin: 20px 0px;
-
 }
