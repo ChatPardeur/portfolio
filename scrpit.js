@@ -69,9 +69,6 @@ function showProject(className, projectsMap){           /*gère l'affichage de t
 
     let projects_to_show /*array des projets à afficher*/
 
-    if(document.getElementById("rien_a_afficher").classList.contains("visible_project")){
-        document.getElementById("rien_a_afficher").classList.remove("visible_project")
-    }
 
 
     if(className == "tous"){        /*décoche toutes les checkbox sauf "tous"*/
@@ -113,6 +110,11 @@ function showProject(className, projectsMap){           /*gère l'affichage de t
         if(projectsMap.get(project) == 1){
             animateShow(project)
             project.classList.add("visible_project")
+        }
+
+        if(document.getElementById("rien_a_afficher").classList.contains("visible_project")){
+            console.log("cc")
+            document.getElementById("rien_a_afficher").classList.remove("visible_project")
         }
     }
 }
