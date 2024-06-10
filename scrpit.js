@@ -16,7 +16,7 @@ function defilementArticle(){       /*ajoute une légère animation lors de l'ap
     });
     
     
-    const articles = document.querySelectorAll('article')
+    const articles = document.querySelectorAll('article, section, article li')
     
     for(const article of articles){
         observer.observe(article)
@@ -68,6 +68,10 @@ function animateShow(project){      /*animation pour le projet lorrqu'il appara�
 function showProject(className, projectsMap){           /*gère l'affichage de tous les articles ayant la classe |className|*/
 
     let projects_to_show /*array des projets à afficher*/
+
+    if(document.getElementById("rien_a_afficher").classList.contains("visible_project")){
+        document.getElementById("rien_a_afficher").classList.remove("visible_project")
+    }
 
 
     if(className == "tous"){        /*décoche toutes les checkbox sauf "tous"*/
@@ -137,7 +141,6 @@ function hideProject(className, projectsMap){       /*gère le masquage de tous 
         }
     }
     if(className == "tous"){
-        console.log(document.getElementById("rien_a_afficher"))
         document.getElementById("rien_a_afficher").classList.add("visible_project")
     }
 }
