@@ -272,6 +272,7 @@ footer{
   font-family: 'PlusjakartaSans';
 
   padding: 30px;
+  margin-bottom: 20px;
 }
 
 footer div{
@@ -611,7 +612,10 @@ label{
   border-bottom: 2px solid var(--rouge1);
   width: fit-content;
   margin-left: auto;
+}
 
+.body_projet_spe header h4 a:hover{
+  color: var(--rouge1);
 }
 
 .body_projet_spe header div{
@@ -656,8 +660,31 @@ label{
   color: var(--rouge1);
 }
 
+
+.conteneur_desc{
+  display: flex;
+  margin: 20px 0px;
+}
+.body_projet_spe article .conteneur_desc img{
+  width: 180px;
+  height: auto;
+  margin: 0px 20px;
+}
+
+.body_projet_spe article .conteneur_desc p{
+  margin: 0px;
+}
+
+
+.body_projet_spe article figcaption{
+  color: var(--white1);
+  font-family: "PlusJakartaSans";
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .body_projet_spe article section{
-  margin: 40px 0px;
+  margin: 60px 0px;
   padding-right: 100px;
 }
 
@@ -715,7 +742,6 @@ label{
   margin: 0px;
   margin-right: 20px;
 }
-
 
 
 .body_projet_spe main .liens_projet a p{
