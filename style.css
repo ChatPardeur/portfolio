@@ -751,3 +751,14 @@ label{
 .body_projet_spe main .liens_projet a p{
   margin: 0px;
 }
+
+#affiche{
+  width: 120px;
+  height: auto;
+}
+
+#figma{
+  width: 90px;
+  height: auto;
+  margin: 0px;
+}
