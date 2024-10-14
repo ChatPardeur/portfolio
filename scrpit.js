@@ -1,16 +1,16 @@
 /*-------------------------------- effets visuels globaux --------------------------------*/
 
 function defilementArticle(){       /*ajoute une légère animation lors de l'apprition d'un article*/
-    
+    let dejaVus = [];               /*tableau qui contiendra les éléments déjà animés - évite que l'animation se rejoue dès que l'élément réapparait à l'écran*/
     const observer = new IntersectionObserver((entries) => {
         for(const entry of entries){
-            
-            if(entry.isIntersecting){
+            if(entry.isIntersecting && !dejaVus.includes(entry.target)){
             
                 entry.target.animate([
                     {transform: 'translateY(100px)', opacity: 0},
                     {transform: 'translateY(0px)', opacity: 1}
-                ], {duration: 400})
+                ], {duration: 250});
+                dejaVus.push(entry.target);
             }
         }
     });
@@ -56,7 +56,7 @@ function apparitionTitre(){         /*ajoute une légère animation à l'apparit
 /* voir description de projectsMap dans checkboxProjects() pour mieux comprendre */
 
 
-function animateShow(project){      /*animation pour le projet lorrqu'il apparaît*/
+function animateShow(project){      /*animation pour le projet lorsqu'il apparaît*/
     project.animate([
         {transform: 'translateY(60px)', opacity: 0},
         {transform: 'translateY(0px)', opacity: 1}
@@ -113,12 +113,24 @@ function showProject(className, projectsMap){           /*gère l'affichage de t
         }
 
         if(document.getElementById("rien_a_afficher").classList.contains("visible_project")){
-            console.log("cc")
             document.getElementById("rien_a_afficher").classList.remove("visible_project")
         }
     }
 }
 
+function mapVide(map)               //renvoie true si la map est vide, false sinon (utilisé dans la fonction hideProject())
+{
+    let vide = true;
+    for (const element of map) 
+    {
+        if(element[1] != 0)
+        {
+            vide = false;
+            break;
+        }    
+    }
+    return vide;
+}
 
 
 function hideProject(className, projectsMap){       /*gère le masquage de tous les articles ayant la classe |className|*/
@@ -126,12 +138,12 @@ function hideProject(className, projectsMap){       /*gère le masquage de tous 
     let projects_to_hide /*array des projets à masquer*/
 
     if(className == "tous"){
-        projects_to_hide = Array.from(document.querySelectorAll("#projects-container article"))
+        projects_to_hide = Array.from(document.querySelectorAll("#projects-container article"));
 
     }
 
     else{
-        projects_to_hide = Array.from(document.getElementsByClassName(className))
+        projects_to_hide = Array.from(document.getElementsByClassName(className));
     }
 
     for(const project of projects_to_hide){
@@ -139,12 +151,14 @@ function hideProject(className, projectsMap){       /*gère le masquage de tous 
         projectsMap.set(project, projectsMap.get(project)-1)
 
         if(projectsMap.get(project) == 0){
-            project.classList.remove("visible_project")
+            project.classList.remove("visible_project");
         }
     }
-    if(className == "tous"){
-        document.getElementById("rien_a_afficher").classList.add("visible_project")
+    if(mapVide(projectsMap))                        //affichage spécial si aucun projet n'est à afficher
+    {
+        document.getElementById("rien_a_afficher").classList.add("visible_project");
     }
+
 }
 
 
@@ -184,7 +198,8 @@ if(document.title != "projets BLB")
 apparitionNav()
 apparitionTitre()
 
-if(document.title == "projets BLB"){
+if(document.title == "projets BLB")
+{
     checkboxProjects()
 }
 

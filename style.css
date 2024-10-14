@@ -277,6 +277,7 @@ footer{
 
   padding: 30px;
   margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 footer div{
@@ -713,6 +714,8 @@ label{
 .body_projet_spe main .liens_projet{
   display: flex;
   justify-content: center;
+  margin-bottom: 0px;
+  padding: 10px;
 }
 
 
@@ -725,6 +728,7 @@ label{
   border-radius: 20px;
   padding: 20px;
   transition: transform 0.3s ease;
+  margin: 0px 15px;
 }
 
 .body_projet_spe main .liens_projet a:hover{
@@ -755,10 +759,4 @@ label{
 #affiche{
   width: 120px;
   height: auto;
-}
-
-#figma{
-  width: 90px;
-  height: auto;
-  margin: 0px;
 }
