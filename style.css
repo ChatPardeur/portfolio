@@ -126,7 +126,7 @@ nav p{
 h1{
   font-family: 'JosefinSans';
   color: var(--white1);
-  font-size: 110px;
+  font-size: 90px;
   padding: 5px;
 }
 
@@ -135,7 +135,7 @@ header span{
 }
 
 #b{
-  font-size: 130px;
+  font-size: 110px;
 }
 
 header{
