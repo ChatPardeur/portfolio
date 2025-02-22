@@ -760,3 +760,19 @@ label{
   width: 120px;
   height: auto;
 }
+
+.img_container{
+  display: flex;
+}
+
+.logo_grand{
+  max-width: 65px;
+  object-fit: contain;
+  margin: 10px;
+}
+
+.img_container figure img{
+  height: 250px;
+  width: auto;
+}
+
