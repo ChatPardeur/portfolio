@@ -513,7 +513,6 @@ label{
 }
 
 #projects-container article a:hover{
-  transform: scale(1.02);
   text-decoration: none;
 }
 
