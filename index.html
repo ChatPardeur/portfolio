@@ -1,123 +1,137 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio BLB</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio BLB</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-  <body>
+
+<body>
     <header>
-      <h1 id="b"><span>B</span>aptiste</h1>
-      <h1><span>L</span>AMBERT--<span>B</span>RUNEL</h1>
+        <h1 id="b"><span>B</span>aptiste</h1>
+        <h1><span>L</span>AMBERT--<span>B</span>RUNEL</h1>
     </header>
     <main>
-      <article>
-        <img src="images/photoBLB.jpg" alt="photo Baptiste LAMBERT--BRUNEL">
-        <div id="content">
-          <h3>À propos de moi</h3>
-          <hr>
-          <p id="txtPresentation">
-            Bonjour ! Baptiste, j'ai 19 ans et suis étudiant en BUT Informatique. Je me suis engagé dans cette voie pour le plaisir de créer, donner
-            vie à des idées. <br>
-            Créatif et sérieux, je suis à l'aise en équipe comme en solo pour réussir dans mes projets.
-            Curieux de découvrir le monde de l'entreprise, je suis actuellement à la recherche d'un stage dans le développement. Ce sera
-             l'occasion pour moi d'acquérir beaucoup d'expérience, et d'élargir ma vision de l'informatique.
-
-          </p>
-        </div>
-      </article>
-
-      <article id="etudes" class="article">
-        
-        <h3>Mes études</h3>
-        <div id="test"></div>
-        <ul>
-          <li>
-            <p>2023 <br> - <br> en cours</p>  
-            <div class="diplome">
-              <h4> <a href="programme BUT info.pdf" target="_blank">BUT Informatique</a></h4>
-              <hr>
-              <h5>À l'<a href="https://iut-lannion.univ-rennes.fr/" target="_blank">IUT de <span class="highlight">Lannion</span></a></h5>
-              <h5>Parcours A : <span class="highlight">réalisation d'applications</span> - conception, développement, validation</h5>
+        <article>
+            <img src="images/photoBLB.jpg" alt="photo Baptiste LAMBERT--BRUNEL">
+            <div id="content">
+                <h3>À propos de moi</h3>
+                <hr>
+                <p id="txtPresentation">
+                    Bonjour ! Baptiste, j'ai 19 ans et suis étudiant en BUT Informatique. Je me suis engagé dans cette voie pour le plaisir de créer, donner vie à des idées. <br> Créatif et sérieux, je suis à l'aise en équipe comme en solo pour réussir
+                    dans mes projets.
+                </p>
             </div>
-          </li>
-          <li>
-            <p>2020 <br> - <br> 2023</p>  
-          <div class="diplome">
-            <h4>Baccalauréat général</h4>
-            <hr>
-            <h5>Spécialités : <span class="highlight">Mathématiques</span> et <span class="highlight">Numérique Sciences Informatiques</span></h5>
-            <h5>obtenu avec mention <span class="highlight">Bien</span> (15.6)</h5>
-            <h5> <a href="https://www.lycee-rene-cassin-montfort-sur-meu.ac-rennes.fr/">Lycée général René Cassin, Montfort sur Meu (35)</a></h5>
-          </div>
-          </li>
-        </ul>
-      </article>
+        </article>
+
+        <article id="etudes" class="article">
+
+            <h3>Mes études</h3>
+            <div id="test"></div>
+            <ul>
+                <li>
+                    <p>2023 <br> - <br> en cours</p>
+                    <div class="diplome">
+                        <h4> <a href="programme BUT info.pdf" target="_blank">BUT Informatique</a></h4>
+                        <hr>
+                        <h5>À l'<a href="https://iut-lannion.univ-rennes.fr/" target="_blank">IUT de <span class="highlight">Lannion</span></a></h5>
+                        <h5>Parcours A : <span class="highlight">réalisation d'applications</span> - conception, développement, validation</h5>
+                    </div>
+                </li>
+                <li>
+                    <p>2020 <br> - <br> 2023</p>
+                    <div class="diplome">
+                        <h4>Baccalauréat général</h4>
+                        <hr>
+                        <h5>Spécialités : <span class="highlight">Mathématiques</span> et <span class="highlight">Numérique Sciences Informatiques</span></h5>
+                        <h5>obtenu avec mention <span class="highlight">Bien</span> (15.6)</h5>
+                        <h5> <a href="https://www.lycee-rene-cassin-montfort-sur-meu.ac-rennes.fr/">Lycée général René Cassin, Montfort sur Meu (35)</a></h5>
+                    </div>
+                </li>
+            </ul>
+        </article>
 
     </main>
-    <footer>
-      <div id="contact">
-        <h4>me contacter</h4>
-        <div class="contact">
-          <img src="images/icones/icones_blanc/icone_mail.png" alt="icone mail">
-          <a href="mailto:baptiste.lambert.brunel@gmail.com">baptiste.lambert.brunel@gmail.com</a>
+    <div id="footer"></div>
+    <script>
+        fetch("composants/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
+    <div id="navbar"></div>
+    <script>
+        fetch("composants/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar").innerHTML = html;
+            });
+    </script>
+    <!-- <footer>
+        <div id="contact">
+            <h4>me contacter</h4>
+            <div class="contact">
+                <img src="images/icones/icones_blanc/icone_mail.png" alt="icone mail">
+                <a href="mailto:baptiste.lambert.brunel@gmail.com">baptiste.lambert.brunel@gmail.com</a>
+            </div>
+            <div class="contact">
+                <img src="images/icones/icones_blanc/icone_tel.png" alt="icone téléphone">
+                <p>06 09 91 54 17</p>
+            </div>
         </div>
-        <div class="contact">
-          <img src="images/icones/icones_blanc/icone_tel.png" alt="icone téléphone">
-          <p>06 09 91 54 17</p>
+        <div id="icones_ft">
+            <a href="https://github.com/ChatPardeur">
+                <img src="images/icones/icones_blanc/icone_github.png" alt="github">
+            </a>
+            <a href="https://www.linkedin.com/in/baptiste-lambert-brunel-a747652bb/">
+                <img src="images/icones/icones_blanc/icone_linkedin.png" alt="linkedin">
+            </a>
         </div>
-      </div>
-      <div id="icones_ft">
-        <a href="https://github.com/ChatPardeur">
-          <img src="images/icones/icones_blanc/icone_github.png" alt="github">
-        </a>
-        <a href="https://www.linkedin.com/in/baptiste-lambert-brunel-a747652bb/">
-          <img src="images/icones/icones_blanc/icone_linkedin.png" alt="linkedin">
-        </a>
-      </div>
-      <div id="credits">
-        <p>Toutes les icônes utilisées proviennent de <a href="https://www.flaticon.com/">Flaticon</a>, et ont été réalisées
-        par : </p>
-        <p>
-          <a href="https://www.flaticon.com/authors/nawicon">nawicon</a>, 
-          <a href="https://www.flaticon.com/fr/auteurs/uniconlabs">UniconLabs</a>, 
-          <a href="https://www.flaticon.com/authors/freepik">Freepik</a>, 
-          <a href="https://www.flaticon.com/fr/auteurs/karyative">Kariyative</a> et 
-          <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel Perfect</a>.
-        </p>
-      </div>
-    </footer>
-      
-    <nav> 
+        <div id="credits">
+            <p>Toutes les icônes utilisées proviennent de <a href="https://www.flaticon.com/">Flaticon</a>, et ont été réalisées par : </p>
+            <p>
+                <a href="https://www.flaticon.com/authors/nawicon">nawicon</a>,
+                <a href="https://www.flaticon.com/fr/auteurs/uniconlabs">UniconLabs</a>,
+                <a href="https://www.flaticon.com/authors/freepik">Freepik</a>,
+                <a href="https://www.flaticon.com/fr/auteurs/karyative">Kariyative</a> et
+                <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel Perfect</a>.
+            </p>
+        </div>
+    </footer> -->
+
+    <!-- <nav>
         <ul>
             <li>
-              <a href="index.html" class="nav_item">
-                  <img src="images/icones/icones_blanc/icone_accueil.png" alt="accueil">
-                  <p class="nav_item_text">accueil</p>
-              </a>
+                <a href="index.html" class="nav_item">
+                    <img src="images/icones/icones_blanc/icone_accueil.png" alt="accueil">
+                    <p class="nav_item_text">accueil</p>
+                </a>
             </li>
             <li>
-              <a href="projets.html" class="nav_item">
-                  <img src="images/icones/icones_blanc/icone_projet.png" alt="projets">
-                  <p class="nav_item_text">projets</p>
-              </a>
+                <a href="projets.html" class="nav_item">
+                    <img src="images/icones/icones_blanc/icone_projet.png" alt="projets">
+                    <p class="nav_item_text">projets</p>
+                </a>
             </li>
             <li>
-              <a href="formation.html" class="nav_item">
-                <img src="images/icones/icones_blanc/icone_formation.png" alt="formation">
-                <p class="nav_item_text">formation</p>
-            </a>
+                <a href="formation.html" class="nav_item">
+                    <img src="images/icones/icones_blanc/icone_formation.png" alt="formation">
+                    <p class="nav_item_text">formation</p>
+                </a>
             </li>
             <li>
-              <a href="cv_Baptiste_LAMBERT_BRUNEL.pdf" class="nav_item" target="_blank">
-                  <img src="images/icones/icones_blanc/icone_cv.png" alt="cv">
-                  <p class="nav_item_text">CV</p>
-              </a>
+                <a href="cv_Baptiste_LAMBERT_BRUNEL.pdf" class="nav_item" target="_blank">
+                    <img src="images/icones/icones_blanc/icone_cv.png" alt="cv">
+                    <p class="nav_item_text">CV</p>
+                </a>
             </li>
 
         </ul>
-    </nav>
-  </body>
-  <script src="scrpit.js"></script>
+    </nav> -->
+</body>
+<script src="scrpit.js"></script>
+
 </html>
