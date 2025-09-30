@@ -1,153 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>problème des 8 dames BLB</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problème des 8 dames BLB</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-  <body class="body_projet_spe">
+
+<body class="body_projet_spe">
     <header>
-      <h1><span>L</span>e problème des</h1>
-      <h1><span>8</span> dames</h1>
-      <h4><a href="../formation.html">compétence 1</a></h4>
-      <div>
-        <img src="../images/icones/icones_prog/logo_python.png" alt="python">
-        <img src="../images/icones/icones_blanc/icone_github.png" alt="github">
-      </div>
+        <h1><span>L</span>e problème des</h1>
+        <h1><span>8</span> dames</h1>
+        <h4><a href="../formation.html">compétence 1</a></h4>
+        <div>
+            <img src="../images/icones/icones_prog/logo_python.png" alt="python">
+            <img src="../images/icones/icones_blanc/icone_github.png" alt="github">
+        </div>
     </header>
     <main>
         <article>
             <h3>Description</h3>
-              <div class="conteneur_desc">
+            <div class="conteneur_desc">
                 <img src="../images/images_pages_projets/pb8reines/pb_dames.png" alt="problème 8 dames">
-                <p>Dans ce projet universitaire en équipe, nous avons développé un algorithme trouvant la solution au <span>problème des 8 dames</span>.
-                Ce problème consiste à placer n dames sur un échiquier de nxn (8 dames sur un échiquier 8x8 par exemple), sans qu'aucune dame ne 
-                menace les autres.
+                <p>Dans ce projet universitaire en équipe, nous avons développé un algorithme trouvant la solution au <span>problème des 8 dames</span>. Ce problème consiste à placer n dames sur un échiquier de nxn (8 dames sur un échiquier 8x8 par exemple),
+                    sans qu'aucune dame ne menace les autres.
                 </p>
             </div>
             <p>
-              Le but de ce projet est de comparer différents algorithmes, ainsi le problème a été résolu avec plusieurs méthodes. De plus, l'une
-               des contraintes était de représenter le problème en utilisant un <span>graphe</span>.
+                Le but de ce projet est de comparer différents algorithmes, ainsi le problème a été résolu avec plusieurs méthodes. De plus, l'une des contraintes était de représenter le problème en utilisant un <span>graphe</span>.
             </p>
         </article>
 
         <article>
-          <h3>Étapes</h3>
-          <section>
-            <h2><span class="highlight">1.</span>Représentation du problème</h2>
-            <p>
-              Comme dit précedemment, il nous fallait représenter le problème comme un graphe. Dans ce graphe, chaque noeud est un échiquier avec 
-              une certaine quantité de dames déjà présentes dessus. Ses enfants sont les échiquiers que l'on obtiendrait en rajoutant une dame de 
-              plus (sans menacer les dames déjà présentes). <br>
-              Ainsi la racine de l'arbre est un arbre vide, et on retrouve au niveau le plus profond toutes les solutions possibles.
-            </p>
-            <figure>
-              <img src="../images/images_pages_projets/pb8reines/exemple_graphe_pb8dames.png" alt="exemple graphe">
-              <figcaption>extrait d'un exemple de graphe</figcaption>
-            </figure>
-          </section>
-          <section>
-            <h2><span class="highlight">2.</span>Développement</h2>
-            <p>
-              J'ai donc commencé par créer les différentes classes nécéssaires pour représenter un échiquier, un sommet de l'échiquier et un 
-              graphe, ainsi que les méthodes associées (vérification de la validité d'un échiquier, ajout des enfants d'un sommet, remplissage
-              de l'arbre...). <br><br>
-              Ont ensuite été développées trois algorithmes résolvant le problème. Le premier utilsait le graphe évoqué plus tôt, le second 
-              était une algorithme de bruteforce passant par toutes les configurations d'échiquiers possibles pour ne retenir que les valides.
-              Enfin, le troisième était un algorithme de backtracking, auquel j'ai ajouté une interface graphique pour voir sa progression
-              en temps réel.
-            </p>
-          </section>
-          <section>
-            <h2><span class="highlight">3.</span>Analyse des résultats</h2>
-            <p>En se basant sur le temps d'exécution des porgrammes dans différentes scénarios (recherche d'une seule solution, solution avec
-              la position de la première dame imposée, ensemble des solutions) pour des grilles de différentes tailles, on a pu comparer
-              l'efficacité des algorithmes. <br><br>
-              Utiliser le graphe est la solution la plus flexible, car il suffit de créer l'arbre une seule fois (ce qui peut prendre un peu de temps)
-              pour ensuite parcourir toutes les solutions (presque instantané). À côté le backtracking est très efficace pour trouver une seule solution
-              , mais trop long sinon. Enfin, le temps d'exécution du bruteforce accroît exponentiellement avec la taille de la grille.
-            </p>
-          </section>
+            <h3>Étapes</h3>
+            <section>
+                <h2><span class="highlight">1.</span>Représentation du problème</h2>
+                <p>
+                    Comme dit précedemment, il nous fallait représenter le problème comme un graphe. Dans ce graphe, chaque noeud est un échiquier avec une certaine quantité de dames déjà présentes dessus. Ses enfants sont les échiquiers que l'on obtiendrait en rajoutant
+                    une dame de plus (sans menacer les dames déjà présentes). <br> Ainsi la racine de l'arbre est un arbre vide, et on retrouve au niveau le plus profond toutes les solutions possibles.
+                </p>
+                <figure>
+                    <img src="../images/images_pages_projets/pb8reines/exemple_graphe_pb8dames.png" alt="exemple graphe">
+                    <figcaption>extrait d'un exemple de graphe</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h2><span class="highlight">2.</span>Développement</h2>
+                <p>
+                    J'ai donc commencé par créer les différentes classes nécéssaires pour représenter un échiquier, un sommet de l'échiquier et un graphe, ainsi que les méthodes associées (vérification de la validité d'un échiquier, ajout des enfants d'un sommet, remplissage
+                    de l'arbre...). <br><br> Ont ensuite été développées trois algorithmes résolvant le problème. Le premier utilsait le graphe évoqué plus tôt, le second était une algorithme de bruteforce passant par toutes les configurations
+                    d'échiquiers possibles pour ne retenir que les valides. Enfin, le troisième était un algorithme de backtracking, auquel j'ai ajouté une interface graphique pour voir sa progression en temps réel.
+                </p>
+            </section>
+            <section>
+                <h2><span class="highlight">3.</span>Analyse des résultats</h2>
+                <p>En se basant sur le temps d'exécution des porgrammes dans différentes scénarios (recherche d'une seule solution, solution avec la position de la première dame imposée, ensemble des solutions) pour des grilles de différentes tailles, on
+                    a pu comparer l'efficacité des algorithmes. <br><br> Utiliser le graphe est la solution la plus flexible, car il suffit de créer l'arbre une seule fois (ce qui peut prendre un peu de temps) pour ensuite parcourir toutes les solutions
+                    (presque instantané). À côté le backtracking est très efficace pour trouver une seule solution , mais trop long sinon. Enfin, le temps d'exécution du bruteforce accroît exponentiellement avec la taille de la grille.
+                </p>
+            </section>
         </article>
         <article>
-          <h3>Acquis</h3>
-          <p>Ce projet m'a beaucoup apporté, en tant que <span>développeur</span> mais aussi en tant que <span>membre d'une équipe</span>. En effet, j'avais la 
-            <span>responsabilité</span> de développer les classes utilisées par mes camarades, il fallait donc adapter mon travail pour qu'il soit
-            adapté à leurs besoins et facile d'utilisation. Et évidemment, le développement m'a permis de mettre à l'épreuve ma capacité de 
-            <span>raisonnement</span> et mes compétences en <span>Python</span>.
-          </p>
+            <h3>Acquis</h3>
+            <p>Ce projet m'a beaucoup apporté, en tant que <span>développeur</span> mais aussi en tant que <span>membre d'une équipe</span>. En effet, j'avais la
+                <span>responsabilité</span> de développer les classes utilisées par mes camarades, il fallait donc adapter mon travail pour qu'il soit adapté à leurs besoins et facile d'utilisation. Et évidemment, le développement m'a permis de mettre
+                à l'épreuve ma capacité de
+                <span>raisonnement</span> et mes compétences en <span>Python</span>.
+            </p>
         </article>
         <article class="liens_projet">
-          <a href="https://github.com/ChatPardeur/SAE_202_graphes" target="_blank">
-            
-            <img src="../images/icones/icones_blanc/icone_github.png" alt="logo github">
-            <p>voir le code</p>
-          </a>
+            <a href="https://github.com/ChatPardeur/SAE_202_graphes" target="_blank">
+
+                <img src="../images/icones/icones_blanc/icone_github.png" alt="logo github">
+                <p>voir le code</p>
+            </a>
         </article>
     </main>
-    <footer>
-      <div id="contact">
-        <h4>me contacter</h4>
-        <div class="contact">
-          <img src="../images/icones/icones_blanc/icone_mail.png" alt="icone mail">
-          <a href="mailto:baptiste.lambert.brunel@gmail.com">baptiste.lambert.brunel@gmail.com</a>
-        </div>
-        <div class="contact">
-          <img src="../images/icones/icones_blanc/icone_tel.png" alt="icone téléphone">
-          <p>06 09 91 54 17</p>
-        </div>
-      </div>
-      <div id="icones_ft">
-        <a href="https://github.com/ChatPardeur">
-          <img src="../images/icones/icones_blanc/icone_github.png" alt="github">
-        </a>
-        <a href="https://www.linkedin.com/in/baptiste-lambert-brunel-a747652bb/">
-          <img src="../images/icones/icones_blanc/icone_linkedin.png" alt="linkedin">
-        </a>
-      </div>
-      <div id="credits">
-        <p>Toutes les icônes utilisées proviennent de <a href="https://www.flaticon.com/">Flaticon</a>, et ont été réalisées
-        par : </p>
-        <p>
-          <a href="https://www.flaticon.com/authors/nawicon">nawicon</a>, 
-          <a href="https://www.flaticon.com/fr/auteurs/uniconlabs">UniconLabs</a>, 
-          <a href="https://www.flaticon.com/authors/freepik">Freepik</a>, 
-          <a href="https://www.flaticon.com/fr/auteurs/karyative">Kariyative</a> et 
-          <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel Perfect</a>.
-        </p>
-      </div>
-    </footer>
-      
-    <nav> 
-        <ul>
-            <li>
-              <a href="../index.html" class="nav_item">
-                  <img src="../images/icones/icones_blanc/icone_accueil.png" alt="accueil">
-                  <p class="nav_item_text">accueil</p>
-              </a>
-            </li>
-            <li>
-              <a href="../projets.html" class="nav_item">
-                  <img src="../images/icones/icones_blanc/icone_projet.png" alt="projets">
-                  <p class="nav_item_text">projets</p>
-              </a>
-            </li>
-            <li>
-              <a href="../formation.html" class="nav_item">
-                <img src="../images/icones/icones_blanc/icone_formation.png" alt="formation">
-                <p class="nav_item_text">formation</p>
-            </a>
-            </li>
-            <li>
-              <a href="../cv_Baptiste_LAMBERT_BRUNEL.pdf" class="nav_item" target="_blank">
-                  <img src="../images/icones/icones_blanc/icone_cv.png" alt="cv">
-                  <p class="nav_item_text">CV</p>
-              </a>
-            </li>
+    <div id="footer"></div>
+    <script>
+        fetch("composants/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
+    <div id="navbar"></div>
+    <script>
+        fetch("composants/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar").innerHTML = html;
+            });
+    </script>
+</body>
+<script src="../scrpit.js"></script>
 
-        </ul>
-    </nav>
-  </body>
-  <script src="../scrpit.js"></script>
 </html>
