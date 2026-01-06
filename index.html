@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio BLB</title>
     <link rel="stylesheet" href="/portfolio/style.css">
+    <link rel="icon" type="image/x-icon" href="/portfolio/images/icones/icones_noir/icone_cv.png">
 </head>
 
 <body>
@@ -45,13 +46,13 @@
                 <li>
                     <p>2023 <br> - <br> en cours</p>
                     <div class="diplome">
-                        <h4> <a href="programme BUT info.pdf" target="_blank">BUT Informatique</a></h4>
+                        <h4> <a href="/portfolio/programme BUT info.pdf" target="_blank">BUT Informatique</a></h4>
                         <hr>
                         <h5>À l'<a href="https://iut-lannion.univ-rennes.fr/" target="_blank">IUT de <span class="highlight">Lannion</span></a></h5>
                         <h5>Parcours A : <span class="highlight">réalisation d'applications</span> - conception, développement, validation</h5>
-                        <a href="stageAlternance.html" id="linkStageAlternance">
+                        <a href="/portfolio/stageAlternance.html" id="linkStageAlternance">
                             <h5>Stage et alternance à <span class="highlight">Nokia</span></h5>
-                            <img src="images/icones/icones_blanc/redirect.png" alt="redirect">
+                            <img src="/portfolio/images/icones/icones_blanc/redirect.png" alt="redirect">
                         </a>
                     </div>
                 </li>
@@ -69,7 +70,7 @@
     </main>
     <div id="footer"></div>
     <script>
-        const prefixe = "../";
+        const prefixe = "/portfolio/../";
 
         fetch(prefixe + "/portfolio/composants/footer.html")
             .then(res => res.text())
