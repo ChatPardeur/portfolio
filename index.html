@@ -71,7 +71,7 @@
     <script>
         const prefixe = "../";
 
-        fetch(prefixe + "composants/footer.html")
+        fetch(prefixe + "/portfolio/composants/footer.html")
             .then(res => res.text())
             .then(html => {
                 let footerFinal = html.replaceAll('src="images/', 'src="' + prefixe + 'images/');
@@ -82,7 +82,7 @@
     </script>
     <div id="navbar"></div>
     <script>
-        fetch(prefixe + "composants/navbar.html")
+        fetch(prefixe + "/portfolio/composants/navbar.html")
             .then(res => res.text())
             .then(html => {
             let navbarFinale = html.replaceAll('src="images/', 'src="' + prefixe + 'images/');
