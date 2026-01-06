@@ -85,27 +85,19 @@
     </main>
     <div id="footer"></div>
     <script>
-        const prefixe = "../";
-
-        fetch(prefixe + "composants/footer.html")
+        fetch("/portfolio/composants/footer.html")
             .then(res => res.text())
             .then(html => {
-                let footerFinal = html.replaceAll('src="images/', 'src="' + prefixe + 'images/');
-                footerFinal = footerFinal.replaceAll('href="pages/', 'href="' + prefixe + 'pages/');
-
-                document.getElementById("footer").innerHTML = footerFinal;
+                document.getElementById("footer").innerHTML = html;
             });
     </script>
     <div id="navbar"></div>
     <script>
-        fetch(prefixe + "composants/navbar.html")
+        fetch("/portfolio/composants/navbar.html")
             .then(res => res.text())
             .then(html => {
-            let navbarFinale = html.replaceAll('src="images/', 'src="' + prefixe + 'images/');
-            navbarFinale = navbarFinale.replaceAll('href="', 'href="' + prefixe);
-
-            document.getElementById("navbar").innerHTML = navbarFinale;            
-        });
+                document.getElementById("navbar").innerHTML = html;
+            });
     </script>
 </body>
 <script src="../script.js"></script>
