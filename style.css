@@ -48,7 +48,7 @@ body {
 }
 
 
-/*--------------------------------- nav bar ---------------------------------*/
+/*--------------------------------- navbar ---------------------------------*/
 
 nav {
     border-left: 2px solid var(--rouge1);
@@ -196,8 +196,12 @@ article img {
     margin-right: 50px;
 }
 
+article a {
+    border-bottom: 1px solid var(--bleu1);
+}
+
 article a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid var(--white1);
 }
 
 
@@ -221,7 +225,6 @@ article li div {
 }
 
 article li hr {
-    margin: 15px 0px;
     border: 1px solid var(--rouge1);
 }
 
@@ -237,27 +240,68 @@ article li .highlight {
 article li h5 {
     font-size: 19px;
     font-weight: 400;
-    margin-bottom: 10px;
 }
 
 #etudes ul {
     margin-left: 35px;
 }
 
+#etudes li {
+    display: flex;
+}
+
+#etudes .diplome {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 #etudes {
     align-items: center;
     top: 30px;
+    position: relative;
+    display: flex;
+}
+
+#etudes #etudesTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #etudes h3 {
     text-align: center;
 }
 
-#test {
-    height: 340px;
-    border-right: 2px solid var(--rouge1);
+
+#etudes {
+    display: flex;
+    align-items: stretch;
 }
 
+#studies-separator {
+    width: 1px; 
+    border-right: 2px solid var(--rouge1);
+    margin: 50px 0px;
+}
+
+#linkStageAlternance{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+}
+
+#linkStageAlternance h5{
+    justify-content: center;
+}
+
+#linkStageAlternance img {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    margin-left: 5px;
+}
 
 /*------------------------------------------------------------------------*/
 
@@ -489,8 +533,12 @@ label {
     transition: transform 0.3s ease;
 }
 
+#projects-container article a {
+    border-bottom: none;
+}
 #projects-container article a:hover {
     text-decoration: none;
+    border-bottom: none;
 }
 
 #projects-container .visible_project {

@@ -17,29 +17,21 @@
         <article>
             <img src="images/photoBLB.jpg" alt="photo Baptiste LAMBERT--BRUNEL">
             <div id="content">
-                <h3>À propos de moi</h3>
+                <h3>Enchanté !</h3>
                 <hr>
                 <p id="txtPresentation">
-                    Bonjour ! Baptiste, j'ai 19 ans et suis étudiant en BUT Informatique. Je me suis engagé dans cette voie pour le plaisir de créer, donner vie à des idées. <br> Créatif et sérieux, je suis à l'aise en équipe comme en solo pour réussir
+                    Baptiste, 19 ans, je suis étudiant en 3e année de BUT Informatique. Je me suis engagé dans cette voie pour le plaisir de créer, donner vie à des idées. <br> Créatif et sérieux, je suis à l'aise en équipe comme en solo pour réussir
                     dans mes projets.
                 </p>
             </div>
         </article>
 
-        <article id="etudes" class="article">
-
-            <h3>Mes études</h3>
-            <div id="test"></div>
+        <article id="etudes">
+            <div id="etudesTitle">
+                <h3>Mes études</h3>
+            </div>
+            <div id="studies-separator"></div>
             <ul>
-                <li>
-                    <p>2023 <br> - <br> en cours</p>
-                    <div class="diplome">
-                        <h4> <a href="programme BUT info.pdf" target="_blank">BUT Informatique</a></h4>
-                        <hr>
-                        <h5>À l'<a href="https://iut-lannion.univ-rennes.fr/" target="_blank">IUT de <span class="highlight">Lannion</span></a></h5>
-                        <h5>Parcours A : <span class="highlight">réalisation d'applications</span> - conception, développement, validation</h5>
-                    </div>
-                </li>
                 <li>
                     <p>2020 <br> - <br> 2023</p>
                     <div class="diplome">
@@ -50,25 +42,54 @@
                         <h5> <a href="https://www.lycee-rene-cassin-montfort-sur-meu.ac-rennes.fr/">Lycée général René Cassin, Montfort sur Meu (35)</a></h5>
                     </div>
                 </li>
+                <li>
+                    <p>2023 <br> - <br> en cours</p>
+                    <div class="diplome">
+                        <h4> <a href="programme BUT info.pdf" target="_blank">BUT Informatique</a></h4>
+                        <hr>
+                        <h5>À l'<a href="https://iut-lannion.univ-rennes.fr/" target="_blank">IUT de <span class="highlight">Lannion</span></a></h5>
+                        <h5>Parcours A : <span class="highlight">réalisation d'applications</span> - conception, développement, validation</h5>
+                        <a href="stageAlternance.html" id="linkStageAlternance">
+                            <h5>Stage et alternance à <span class="highlight">Nokia</span></h5>
+                            <img src="images/icones/icones_blanc/redirect.png" alt="redirect">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <p>Après ?</p>
+                    <div class="diplome">
+                        <h4>Poursuite d'études</h4>
+                        <hr>
+                        <h5>En école d'ingénieur ou master</h5>
+                    </div>
+                </li>
             </ul>
         </article>
 
     </main>
     <div id="footer"></div>
     <script>
-        fetch("composants/footer.html")
+        const prefixe = "../";
+
+        fetch(prefixe + "composants/footer.html")
             .then(res => res.text())
             .then(html => {
-                document.getElementById("footer").innerHTML = html;
+                let footerFinal = html.replaceAll('src="images/', 'src="' + prefixe + 'images/');
+                footerFinal = footerFinal.replaceAll('href="pages/', 'href="' + prefixe + 'pages/');
+
+                document.getElementById("footer").innerHTML = footerFinal;
             });
     </script>
     <div id="navbar"></div>
     <script>
-        fetch("composants/navbar.html")
+        fetch(prefixe + "composants/navbar.html")
             .then(res => res.text())
             .then(html => {
-                document.getElementById("navbar").innerHTML = html;
-            });
+            let navbarFinale = html.replaceAll('src="images/', 'src="' + prefixe + 'images/');
+            navbarFinale = navbarFinale.replaceAll('href="', 'href="' + prefixe);
+
+            document.getElementById("navbar").innerHTML = navbarFinale;            
+        });
     </script>
 </body>
 <script src="scrpit.js"></script>
