@@ -1,12 +1,13 @@
 :root {
     --rouge1: #D62828;
+    --rouge2: #F44;
     --bleu1: #003049;
     --black: #250001;
     --white1: #DDD5D0;
 }
 
 .highlight {
-    color: var(--rouge1);
+    color: var(--rouge2);
     font-weight: bold;
 }
 
@@ -675,10 +676,6 @@ label {
 .body_projet_spe h3 {
     padding-bottom: 15px;
     border-bottom: 2px solid var(--rouge1);
-}
-
-.body_projet_spe article p span {
-    color: var(--rouge1);
 }
 
 .conteneur_desc {
