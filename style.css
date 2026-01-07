@@ -211,6 +211,7 @@ article li>p {
     text-align: center;
     width: 120px;
     margin: 0;
+    flex-shrink: 0;
 }
 
 article li {
