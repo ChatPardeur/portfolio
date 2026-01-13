@@ -177,7 +177,7 @@ p {
 h3 {
     font-family: 'JosefinSans';
     color: var(--white1);
-    font-size: 55px;
+    font-size: 45px;
     margin: 15px;
     margin-left: 0px;
 }
@@ -584,6 +584,7 @@ label {
 .competences_project:hover {
     transform: scale(1.05);
     text-decoration: none;
+    border-bottom: none;
 }
 
 .competences_project {
