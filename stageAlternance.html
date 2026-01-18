@@ -8,16 +8,87 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="body_stageAlternance">
     <header>
         <h1><span class="highlight">S</span>tage et <span class="highlight">A</span>lternance</h1>
     </header>
     <main>
-        <article>
-            <h3>Stage - devOps CI/CD</h3>
+        <article class="intro">
+        <img src="images/images_projets/logo-nokia.png" alt="">
+            <p>
+                J'ai lors de mes 2e et 3e années de BUT informatique réalisé un <span class="highlight"> stage </span> suivi d'une 
+                <span class="highlight">alternance</span> au sein de <span class="highlight">Nokia</span>, au site de Lannion.
+            </p>
         </article>
         <article>
-            <h3>Alternance - Threat Simulation</h3>
+            <h3 id="stage">Stage - devOps CI/CD</h3>
+            <p>
+            Lors de ma 2e année de BUT, j’ai intégré une équipe <span class="highlight">agile</span> travaillant sur un projet de solution cybersécurité pour un stage de <span class="highlight">4 mois</span>. Le logiciel est 
+            constitué de différents <span class="highlight">packages</span>, chaque <span class="highlight">package</span> gérant un <span class="highlight">usecase</span> précis (gestion d’un incident = détection, remédiation).
+            </p>
+            <p>
+            Ma mission lors de ce stage consistait à proposer une solution pour que, lors d’un <span class="highlight">merge</span> (ajout/modification d'un usecase) sur le <span class="highlight">dépôt gitlab</span> du projet : <br>
+            <span class="highlight">1.</span> Les packages affectés par le merge soient <span class="highlight">identifiés</span><br>
+            <span class="highlight">2.</span> Ils soient <span class="highlight">déployés</span> à travers des pipelines spécifiques <br>
+            <span class="highlight">3.</span> Des <span class="highlight">tests</span> robot framework soient exécutés pour tester les packages modifiés <br>
+            </p>
+            <div class="imgAndText">
+                <img src="images/images_pages_projets/stageAlternance/schema_stage.png" alt="shcéma script deploy and test">
+                <p>Pour cela j'ai ajouté un job à la pipeline du projet qui récupère les <span class="highlight">n° de version des packages</span> après le commit, et les 
+                <span class="highlight">compare</span> avec les n° de version déployés pour identifier les packages à mettre à jour.
+                Un <span class="highlight">script</span> déclenche ensuite les pipelines nécessaires au déploiement et tests, en gérant les dépendances entre packages.</p>
+            </div>
+            <section class="challenges">
+                <div>
+                    <h4>
+                        <img src="images/icones/icones_blanc/icone_link.png" alt="icon link">
+                        Relier différents dépôts
+                    </h4>
+                    <p>Les tests, packages à déployer et usecases à identifier se trouvent tous sur des dépôts différents, j'ai donc du réussir à les relier à ma solution sans confusion.</p>
+                </div>
+                <div>
+                    <h4>
+                        <img src="images/icones/icones_blanc/icone_dependencies.png" alt="icon link">
+                        Gérer les dépendances
+                    </h4>
+                    <p>Certains packages ont une dépendances vers d'autres packages, et leur déploiement peut échouer si la dépendance 
+                    n'est pas déployée avant. Ma solution déploie donc les dépendances avant le package actuel, tout en prenant en 
+                    compte le fait que la dépendance peut avoir une dépendance, qu'une même dépendance ne doit pas être déployée plusieurs fois...</p>
+                </div>
+            </section>
+            <h4>Technologies</h4>
+            <section class="technologies">
+                <img src="images/icones/icones_prog/gitlab.jpg" alt="">
+                <img src="images/icones/icones_prog/bash.png" alt="">
+                <img src="images/icones/icones_prog/logo_python.png" alt="">
+            </section>
+
+        </article>
+        <article>
+            <h3 id="alternance">Alternance - Threat Simulation</h3>
+            <p>
+            Je réalise lors de ma 3e année de BUT une alternance d’un an à Nokia. Ma mission consiste à implémenter une 
+            <span class="highlight">plateforme de simulation d'attaque</span> open source au sein d’une infrastructure interne, 
+            et de développer les <span class="highlight">composants</span> nécessaires pour <span class="highlight">relier</span> 
+            la plateforme aux produits Nokia. Ainsi, cette plateforme pourra être utilisée pour facilement lancer des 
+            <span class="highlight">démos</span> spécifiques sans l’intervention d’un expert technique.
+            </p>
+            <p>
+            La plateforme et les machines cibles sont différentes <span class="highlight">VM Linux</span> qu'il a fallu configurer apropriamment. Le projet étant
+            nouveau, j'ai mis en place un <span class="highlight">environnement de développement et production</span>, et un 
+            <span class="highlight">pipeline CI</span> pour automatiser le déploiement de mes composants. Pour des besoins techniques, j'ai
+            également installé un <span class="highlight">docker hub</span> ainsi qu'un <span class="highlight">runner gitlab</span> sur une 
+            machine dédiée.
+            Les composants développés ont <span class="highlight">différentes fonctions</span>, comme s'assurer qu'une attaque lancée depuis la plateforme a été détectée 
+            par le produit de sécurité, ou alors d'exécuter plus de types d'attaques.
+            </p>
+            <h4>technologies utilisées</h4>
+            <section class="technologies">
+                <img src="images/icones/icones_prog/linux.png" alt="linux">
+                <img src="images/icones/icones_prog/logo_python.png" alt="python">
+                <img src="images/icones/icones_prog/gitlab.jpg" alt="gitlab">
+                <img src="images/icones/icones_prog/logo_docker.png" alt="docker">
+            </section>
         </article>
     </main>
     <div id="footer"></div>

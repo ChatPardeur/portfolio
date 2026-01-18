@@ -182,6 +182,11 @@ h3 {
     margin-left: 0px;
 }
 
+h4 {
+    font-family: 'JosefinSans';
+    font-size: 35px;
+}
+
 article p {
     font-family: 'PlusJakartaSans';
     font-weight: 500;
@@ -783,4 +788,82 @@ label {
 .img_container figure img {
     height: 250px;
     width: auto;
+}
+
+/*--------------------------- stage | alternance ----------------------------*/
+.body_stageAlternance h3 {
+    border-bottom: 2px solid var(--rouge1);
+    padding-bottom: 15px;
+}
+
+.body_stageAlternance .intro {
+    flex-direction: row;
+    align-items: center;
+}
+
+.body_stageAlternance .intro p {
+    margin: 0;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 2px solid var(--rouge1);
+}
+
+.body_stageAlternance .intro img {
+    width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin: 0px;
+}
+
+.body_stageAlternance article{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+    margin: 45px 15%;
+}
+
+.body_stageAlternance article p {
+    margin: 0;
+}
+
+.body_stageAlternance article h4 {
+    border-bottom: 2px solid var(--rouge1);
+    width: fit-content;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.body_stageAlternance article div {
+    display: flex;
+    flex-direction: row;
+}
+
+.body_stageAlternance article div img{
+    border-radius: 0;
+    width: 450px;
+    height: auto;    
+    margin: 0;
+    margin-right: 20px;
+}
+
+.body_stageAlternance .challenges {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.body_stageAlternance .challenges div{
+    display: flex;
+    flex-direction: column;
+}
+
+.body_stageAlternance .challenges img{
+    width: 30px;
+    margin: 0;
+}
+
+.body_stageAlternance .technologies img {
+    max-width: 90px;
+    max-height: 90px;
+    margin: 0px 40px 0px 0px;
 }
