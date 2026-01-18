@@ -1,12 +1,13 @@
 :root {
     --rouge1: #D62828;
+    --rouge2: #F44;
     --bleu1: #003049;
     --black: #250001;
     --white1: #DDD5D0;
 }
 
 .highlight {
-    color: var(--rouge1);
+    color: var(--rouge2);
     font-weight: bold;
 }
 
@@ -176,7 +177,7 @@ p {
 h3 {
     font-family: 'JosefinSans';
     color: var(--white1);
-    font-size: 55px;
+    font-size: 45px;
     margin: 15px;
     margin-left: 0px;
 }
@@ -211,6 +212,7 @@ article li>p {
     text-align: center;
     width: 120px;
     margin: 0;
+    flex-shrink: 0;
 }
 
 article li {
@@ -575,13 +577,14 @@ label {
 .competences_project img {
     width: 100px;
     height: auto;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 0px;
 }
 
 .competences_project:hover {
     transform: scale(1.05);
     text-decoration: none;
+    border-bottom: none;
 }
 
 .competences_project {
@@ -674,10 +677,6 @@ label {
 .body_projet_spe h3 {
     padding-bottom: 15px;
     border-bottom: 2px solid var(--rouge1);
-}
-
-.body_projet_spe article p span {
-    color: var(--rouge1);
 }
 
 .conteneur_desc {
